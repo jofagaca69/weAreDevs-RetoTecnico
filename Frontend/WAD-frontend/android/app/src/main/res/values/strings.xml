@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">wad-frontend</string>
+    <string name="title_activity_main">wad-frontend</string>
+    <string name="package_name">com.jofagaca69.wadfrontend</string>
+    <string name="custom_url_scheme">com.jofagaca69.wadfrontend</string>
+</resources>
