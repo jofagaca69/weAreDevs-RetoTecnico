@@ -21,7 +21,6 @@ class TaskViewSet(viewsets.ModelViewSet):
         self.perform_update(serializer)
 
         if getattr(instance, '_prefetched_objects_cache', None):
-            # Si hay objetos precargados en la caché, los invalidamos
             instance._prefetched_objects_cache = {}
 
         return Response(serializer.data)
