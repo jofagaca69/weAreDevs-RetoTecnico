@@ -24,4 +24,17 @@ export class TaskManagerService {
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(`${this.API_URL}/tasks/`);
   }
+
+  deleteTask(id: number): Observable<any> {
+    return this.http.delete(`${this.API_URL}/tasks/${id}/`);
+  }
+
+  createTask(task: { description: string; status: string }): Observable<any> {
+    return this.http.post(`${this.API_URL}/tasks/`, task);
+  }
+
+  updateTask(id: number, task: { description: string; status: string }): Observable<any> {
+    return this.http.put(`${this.API_URL}/tasks/${id}`, task);
+  }
+
 }

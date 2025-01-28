@@ -24,7 +24,8 @@ SECRET_KEY = 'django-insecure-*wb+b7key^-8tei69u27l!zaovoo2-$m4q^l-v!5s$eize08ro
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS=['*']
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'WADBackendApp',
     'rest_framework_simplejwt',
+    'corsheaders'
 ]
 
 REST_FRAMEWORK = {
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'WADBackend.urls'
